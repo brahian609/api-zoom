@@ -9,25 +9,41 @@
 
         <div class="row">
 
-            <div class="col-lg-4">
+            <div class="col-lg-3">
 
                 <?php include 'inc/nav.php'; ?>
 
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-9">
 
-                <?php
-                $listWebinars = $zoomApi->listWebinars();
+                <table class="table table-striped">
 
-                $obj = json_decode($listWebinars);
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                    </tr>
+                    </thead>
 
-                foreach ($obj->webinars as $item) {
+                    <?php
+                    $listWebinars = $zoomApi->listWebinars();
 
-                    echo $item->id." ".$item->topic."<br>";
+                    $obj = json_decode($listWebinars);
 
-                }
+                    foreach ($obj->webinars as $row) {
 
-                ?>
+                        echo "
+                        <tr>
+                            <td>$row->id</td>
+                            <td>$row->topic</td>
+                        </tr>";
+
+                    }
+
+                    ?>
+
+                </table>
+
 
             </div>
 

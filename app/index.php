@@ -4,19 +4,28 @@ require_once '../lib/ZoomRESTAPIPHP.php';
 $zoomApi = new ZoomAPI();
 $_POST['userId'] = $zoomApi::USER_ID;
 
-$route = $_GET['view'];
+$module = $_GET['module'];
+$view   = $_GET['view'];
 
 /*resolver la vista que se debe imprimir*/
-switch ($route) {
+switch ($module) {
 
     case 'home':
-        $html = 'modules/home/index.php';
+        switch ($view){
+            case 'index':
+                $html = 'modules/home/index.php';
+                break;
+        }
         break;
     case 'webinars':
-        $html = 'modules/webinars/index.php';
+        switch ($view){
+            case 'index':
+                $html = 'modules/webinars/index.php';
+                break;
+        }
         break;
     default:
-        $html = 'modules/home/index.php';
+        header("location: index.php?module=home&view=index");
 
 }
 
