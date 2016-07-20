@@ -2,12 +2,14 @@
 /*Zoom Video Communications, Inc. 2015*/
 /*Zoom Support*/
 
-class ZoomAPI{
+require_once 'constanst.php';
+
+class ZoomAPI extends Constant{
 
 	/*The API Key, Secret, & URL will be used in every function.*/
-	private $api_key = 'Please Input Your Own API Key Here';
-	private $api_secret = 'Please Input Your Own API Secret Here';
-	private $api_url = 'https://api.zoom.us/v1/';
+	private $api_key = self::API_KEY;
+	private $api_secret = self::API_SECRET;
+	private $api_url = self::API_URL;
 
 	/*Function to send HTTP POST Requests*/
 	/*Used by every function below to make HTTP POST call*/
@@ -20,10 +22,12 @@ class ZoomAPI{
 		$data['api_secret'] = $this->api_secret;
 		$data['data_type'] = 'JSON';
 
+		//echo $request_url;
+
 		$postFields = http_build_query($data);
 		/*Check to see queried fields*/
 		/*Used for troubleshooting/debugging*/
-		echo $postFields;
+		//echo $postFields;
 
 		/*Preparing Query...*/
 		$ch = curl_init();
@@ -36,19 +40,20 @@ class ZoomAPI{
 
 		/*Check for any errors*/
 		$errorMessage = curl_exec($ch);
-		echo $errorMessage;
-		curl_clost($ch);
+		//echo $errorMessage;
+		curl_close($ch);
 
 		/*Will print back the response from the call*/
 		/*Used for troubleshooting/debugging		*/
-		echo $request_url;
-		var_dump($data);
-		var_dump($response);
+		//echo $request_url;
+		//var_dump($data);
+		//var_dump($response);
 		if(!$response){
 			return false;
 		}
 		/*Return the data in JSON format*/
-		return json_encode($response);
+		//return json_encode($response);
+		return $response;
 	}
 	/*Functions for management of users*/
 
