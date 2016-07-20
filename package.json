@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/brahian609/api-zoom/issues"
   },
-  "homepage": "https://github.com/brahian609/api-zoom#readme"
+  "homepage": "https://github.com/brahian609/api-zoom#readme",
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^3.1.0"
+  }
 }
