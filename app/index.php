@@ -1,8 +1,8 @@
 <?php
 
 require_once '../lib/ZoomRESTAPIPHP.php';
-$_POST['userId'] = '2mP6H6EqRA2NmUlBf3xUDQ';
 $zoomApi = new ZoomAPI();
+$_POST['userId'] = $zoomApi::USER_ID;
 
 $route = $_GET['view'];
 
