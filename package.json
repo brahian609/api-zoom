@@ -1,0 +1,23 @@
+{
+  "name": "api-zoom",
+  "version": "1.0.0",
+  "description": "integracion con rest api de zoom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brahian609/api-zoom.git"
+  },
+  "keywords": [
+    "api",
+    "api-zoom"
+  ],
+  "author": "brahian609",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brahian609/api-zoom/issues"
+  },
+  "homepage": "https://github.com/brahian609/api-zoom#readme"
+}
