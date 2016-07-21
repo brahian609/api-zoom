@@ -246,6 +246,12 @@ class ZoomAPI extends Constant{
 	  return $this->sendRequest('webinar/list',$listWebinarsArray);
 	}
 
+	function listRegistrationWebinars(){
+		$listWebinarsArray = array();
+		$listWebinarsArray['host_id'] = $_POST['userId'];
+		return $this->sendRequest('webinar/list/registration',$listWebinarsArray);
+	}
+
 	function getWebinarInfo(){
 	  $getWebinarInfoArray = array();
 	  $getWebinarInfoArray['id'] = $_POST['webinarId'];
