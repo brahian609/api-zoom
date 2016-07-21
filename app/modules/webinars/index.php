@@ -22,11 +22,12 @@
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
+                        <th></th>
                     </tr>
                     </thead>
 
                     <?php
-                    $listWebinars = $zoomApi->listWebinars();
+                    $listWebinars = $zoomApi->listRegistrationWebinars();
 
                     $obj = json_decode($listWebinars);
 
@@ -36,6 +37,9 @@
                         <tr>
                             <td>$row->id</td>
                             <td>$row->topic</td>
+                            <td>
+                                <a data-toggle='modal' data-target='#modalRegister' class='btn btn-default btn-xs glyphicon glyphicon-user'></a>
+                            </td>
                         </tr>";
 
                     }
@@ -50,6 +54,16 @@
         </div>
 
     </div>
+
+    <!-- modal registrar asistentes -->
+    <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                ...
+            </div>
+        </div>
+    </div>
+    <!-- end modal -->
 
     </body>
 

@@ -22,6 +22,6 @@
   "homepage": "https://github.com/brahian609/api-zoom#readme",
   "devDependencies": {
     "bootstrap": "^3.3.6",
-    "jquery": "^3.1.0"
+    "jquery": "1.9.1"
   }
 }
