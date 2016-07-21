@@ -58,9 +58,51 @@
     <!-- modal registrar asistentes -->
     <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
         <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                ...
-            </div>
+            <form action="?module=webinars&view=register" method="post">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Registrar Asistentes</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>Email</th>
+                                <th>Cargo</th>
+                            </tr>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" name="first_name" class="form-control" required>
+                                </td>
+                                <td>
+                                    <input type="text" name="last_name" class="form-control" required>
+                                </td>
+                                <td>
+                                    <input type="email" name="email" class="form-control" required>
+                                </td>
+                                <td>
+                                    <input type="text" name="charge" class="form-control" required>
+                                    <input type="hidden" name="idWebinars" value="964949390">
+                                </td>
+                            </tr>
+                            </tbody>
+                            </thead>
+                        </table>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" name="register" class="btn btn-primary">Guardar</button>
+                    </div>
+
+                </div>
+            </form>
         </div>
     </div>
     <!-- end modal -->

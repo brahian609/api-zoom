@@ -22,6 +22,9 @@ switch ($module) {
             case 'index':
                 $html = 'modules/webinars/index.php';
                 break;
+            case 'register':
+                $html = 'modules/webinars/model.php';
+                break;
         }
         break;
     default:
