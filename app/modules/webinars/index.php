@@ -39,6 +39,7 @@
                             <td>$row->topic</td>
                             <td>
                                 <a data-toggle='modal' data-target='#modalRegister' class='btn btn-default btn-xs glyphicon glyphicon-user'></a>
+                                <a data-toggle='tooltip' href='?module=webinars&view=asistentes' title='Asistentes' class='btn btn-default btn-xs glyphicon glyphicon-list'></a>
                             </td>
                         </tr>";
 
@@ -110,3 +111,8 @@
     </body>
 
 <?php include 'inc/footer.php'; ?>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
